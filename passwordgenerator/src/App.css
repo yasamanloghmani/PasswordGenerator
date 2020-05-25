@@ -1,38 +1,109 @@
 .App {
+  color: aliceblue;
   text-align: center;
+  width:40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background: linear-gradient(145deg, #090d2c, #0b0f34);
+  box-shadow:  50px 50px 100px #05071a, 
+               -50px -50px 100px #0f1548;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-container > input {
+  height: 25px;
+  width:40%;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  
+}
+.switch {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 34px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:checked + .slider {
+  background-color: #764ba2;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #764ba2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.checkbox-container1, .length-input, button {
+  background-color:  rgba(255, 255, 255, 0.07);
+  padding: 10px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
+.lngh > input {
+  padding: 5px;
+  margin: 5px;
+ border-radius: 5px;
+}
+
+button{
+  background:  linear-gradient(135deg, #667eea, #764ba2);
+  color:white;
+  font-size: large;
+  font-weight: bold;
+}
+
+button:hover{
+  background: #764ba2;
 }
