@@ -7,4 +7,4 @@ User can choose a length of the PW with Uppercase, Lowercase, Numeric and symbol
 
 ![main](https://imgur.com/61DAT33.png)
 
-![responsive](hhttps://imgur.com/yJlZS5L.png)
+![responsive](https://imgur.com/yJlZS5L.png)
